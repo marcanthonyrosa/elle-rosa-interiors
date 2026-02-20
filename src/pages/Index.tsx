@@ -1,8 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, Phone, MapPin, Instagram, Facebook, Linkedin } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
+import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin } from "lucide-react";
 
 import heroImage from "@/assets/hero-interior.jpg";
 import portraitImage from "@/assets/designer-portrait.jpg";
@@ -164,44 +161,24 @@ const Index = () => {
       {/* Contact */}
       <section id="contact" className="py-24 md:py-32 bg-secondary/50">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-16">
-            <div>
-              <p className="text-primary tracking-[0.3em] uppercase text-sm mb-4">Get in Touch</p>
-              <h2 className="text-4xl md:text-5xl font-semibold mb-8">
-                Let's Create Something <span className="italic">Beautiful</span>
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-10">
-                Ready to transform your space? Book a consultation and let's bring your vision to life.
-              </p>
-              <div className="space-y-6">
-                <div className="flex items-center gap-4 text-muted-foreground">
-                  <Mail className="w-5 h-5 text-primary" />
-                  <span>hello@ellerosa.com</span>
-                </div>
-                <div className="flex items-center gap-4 text-muted-foreground">
-                  <Phone className="w-5 h-5 text-primary" />
-                  <span>+61 400 000 000</span>
-                </div>
-                <div className="flex items-center gap-4 text-muted-foreground">
-                  <MapPin className="w-5 h-5 text-primary" />
-                  <span>Melbourne, Australia</span>
-                </div>
+          <div className="max-w-xl">
+            <p className="text-primary tracking-[0.3em] uppercase text-sm mb-4">Get in Touch</p>
+            <h2 className="text-4xl md:text-5xl font-semibold mb-8">
+              Let's Create Something <span className="italic">Beautiful</span>
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-10">
+              Ready to transform your space? Get in touch and let's bring your vision to life.
+            </p>
+            <div className="space-y-6">
+              <div className="flex items-center gap-4 text-muted-foreground">
+                <Mail className="w-5 h-5 text-primary" />
+                <span>elle@ellerosadesign.com</span>
+              </div>
+              <div className="flex items-center gap-4 text-muted-foreground">
+                <MapPin className="w-5 h-5 text-primary" />
+                <span>Houston, Texas</span>
               </div>
             </div>
-            <form onSubmit={(e) => e.preventDefault()} className="space-y-6">
-              <div>
-                <Input placeholder="Your Name" className="rounded-none bg-background border-border focus:border-primary h-12" />
-              </div>
-              <div>
-                <Input type="email" placeholder="Your Email" className="rounded-none bg-background border-border focus:border-primary h-12" />
-              </div>
-              <div>
-                <Textarea placeholder="Tell me about your project..." className="rounded-none bg-background border-border focus:border-primary min-h-[160px] resize-none" />
-              </div>
-              <Button type="submit" className="rounded-none px-10 py-6 text-sm tracking-widest uppercase w-full md:w-auto">
-                Send Message
-              </Button>
-            </form>
           </div>
         </div>
       </section>
@@ -212,17 +189,6 @@ const Index = () => {
           <p className="font-['Playfair_Display'] text-sm text-muted-foreground">
             © 2025 Elle Rosa Interior Design. All rights reserved.
           </p>
-          <div className="flex items-center gap-6">
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Instagram">
-              <Instagram size={18} />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="Facebook">
-              <Facebook size={18} />
-            </a>
-            <a href="#" className="text-muted-foreground hover:text-primary transition-colors" aria-label="LinkedIn">
-              <Linkedin size={18} />
-            </a>
-          </div>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
             className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
