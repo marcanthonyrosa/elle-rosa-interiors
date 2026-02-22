@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin } from "lucide-react";
 
 import heroImage from "@/assets/hero-interior.jpg";
-import portraitImage from "@/assets/designer-portrait.jpg";
+import portraitImage from "@/assets/designer-portrait-3.jpeg";
 
 const navLinks = ["About", "Services", "Portfolio", "Contact"];
 
@@ -38,7 +38,7 @@ const Index = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           <button onClick={() => scrollToSection("hero")} className="font-['Playfair_Display'] text-2xl font-semibold tracking-wide text-foreground">
-            Elle <span className="text-primary">Rosa</span>
+            Elle Rosa <span className="text-primary">Design</span>
           </button>
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
@@ -79,7 +79,7 @@ const Index = () => {
         <div className="relative z-10 max-w-3xl mx-auto px-6">
           <p className="text-primary tracking-[0.4em] uppercase text-sm mb-6">Interior Design Studio</p>
           <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-6 font-['Playfair_Display']">
-            Elle Rosa
+            Elle Rosa Design
           </h1>
           <p className="text-lg md:text-xl text-muted-foreground">
             Designing spaces that define you
