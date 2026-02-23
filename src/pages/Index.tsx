@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin } from "lucide-react";
+import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin, Copy, Check } from "lucide-react";
 
 import heroImage from "@/assets/hero-interior.jpg";
 import portraitImage from "@/assets/designer-portrait.jpg";
@@ -26,6 +26,7 @@ const services = [
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -184,21 +185,37 @@ const Index = () => {
       {/* Contact */}
       <section id="contact" className="py-28 md:py-40 bg-card">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="max-w-xl">
+          <div className="text-center">
             <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Get in Touch</p>
             <h2 className="text-3xl md:text-[32px] font-semibold mb-8 leading-snug">
               Let's Create Something <span className="italic">Beautiful</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-10 text-base">
+            <p className="text-muted-foreground leading-relaxed mb-10 text-base max-w-xl mx-auto">
               Ready to transform your space? Get in touch and let's bring your vision to life.
             </p>
-            <div className="space-y-6">
-              <div className="flex items-center gap-4 text-muted-foreground">
-                <Mail className="w-5 h-5 text-primary" />
-                <span>elle@ellerosadesign.com</span>
+            <div className="flex flex-col items-center gap-6">
+              <div className="flex items-center gap-3">
+                <a
+                  href="mailto:elle@ellerosadesign.com"
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
+                >
+                  <Mail className="w-4 h-4" />
+                  Email Us
+                </a>
+                <button
+                  onClick={() => {
+                    navigator.clipboard.writeText("elle@ellerosadesign.com");
+                    setCopied(true);
+                    setTimeout(() => setCopied(false), 2000);
+                  }}
+                  className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors duration-300"
+                  aria-label="Copy email to clipboard"
+                >
+                  {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
+                </button>
               </div>
-              <div className="flex items-center gap-4 text-muted-foreground">
-                <MapPin className="w-5 h-5 text-primary" />
+              <div className="flex items-center gap-2 text-muted-foreground text-sm">
+                <MapPin className="w-4 h-4 text-primary" />
                 <span>Houston, Texas</span>
               </div>
             </div>
