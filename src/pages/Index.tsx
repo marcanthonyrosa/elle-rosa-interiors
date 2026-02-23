@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin, Copy, Check } from "lucide-react";
 
 import heroImage from "@/assets/hero-interior.jpg";
-import portraitImage from "@/assets/designer-portrait.jpg";
+import portraitImage from "@/assets/kitchen.png";
 
 const navLinks = ["About", "Services", "Portfolio", "Contact"];
 
