@@ -85,7 +85,7 @@ const Index = () => {
             Homes designed to actually live in.
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-            You shouldn't have to choose between beautiful and functional. I design spaces for busy families that hold up on a Tuesday just as well as they look on a Saturday.
+            Beautiful spaces for busy families — from the floor plan to the final finish.
           </p>
           <p className="text-sm md:text-base text-muted-foreground/80 max-w-xl mx-auto mb-10 leading-relaxed">
             I handle every detail — from the floor plan to the final finish — so you don't have to.
@@ -131,7 +131,7 @@ const Index = () => {
               </h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed text-base">
                 <p>
-                  I started Elle Rosa because I believe your home should feel like you — not a catalogue, not a trend, not someone else's idea of beautiful.
+                  I started Elle Rosa Design because I believe your home should feel like you — not a catalogue, not a trend, not someone else's idea of beautiful.
                 </p>
                 <p>
                   I work with families building new homes or renovating the one they're already in. I get into it early — working alongside your builder on the layout itself — because the best design decisions happen before the walls go up, not after.
