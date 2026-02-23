@@ -74,16 +74,30 @@ const Index = () => {
       <section id="hero" className="relative h-screen flex items-center justify-center text-center">
         <div className="absolute inset-0">
           <img src={heroImage} alt="Luxury interior design" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-background/60" />
+          <div className="absolute inset-0 bg-background/70" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-6">
-          <p className="text-primary tracking-[0.4em] uppercase text-sm mb-6">Interior Design Studio</p>
-          <h1 className="text-6xl md:text-8xl font-bold leading-tight mb-6 font-['Playfair_Display']">
-            Elle Rosa Design
+          <p className="text-primary tracking-[0.4em] uppercase text-xs mb-8">Elle Rosa Design</p>
+          <h1 className="text-5xl md:text-6xl lg:text-[64px] font-semibold leading-[1.1] mb-6 font-['Playfair_Display']">
+            Timeless, livable interiors designed around real life.
           </h1>
-          <p className="text-lg md:text-xl text-muted-foreground">
-            Designing spaces that define you
+          <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
+            Full-service residential design for busy families who want beautiful spaces without the overwhelm.
           </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button
+              onClick={() => scrollToSection("contact")}
+              className="px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
+            >
+              Start Your Project
+            </button>
+            <button
+              onClick={() => scrollToSection("portfolio")}
+              className="px-8 py-3 border border-foreground/30 text-foreground text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors duration-300"
+            >
+              View Portfolio
+            </button>
+          </div>
         </div>
         <button
           onClick={() => scrollToSection("about")}
@@ -95,7 +109,7 @@ const Index = () => {
       </section>
 
       {/* About */}
-      <section id="about" className="py-24 md:py-32">
+      <section id="about" className="py-28 md:py-40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div className="relative">
@@ -105,11 +119,11 @@ const Index = () => {
               <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-primary hidden md:block" />
             </div>
             <div>
-              <p className="text-primary tracking-[0.3em] uppercase text-sm mb-4">About</p>
-              <h2 className="text-4xl md:text-5xl font-semibold mb-8">
+              <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">About</p>
+              <h2 className="text-3xl md:text-[32px] font-semibold mb-8 leading-snug">
                 Concept to <span className="italic">Completion</span>
               </h2>
-              <div className="space-y-5 text-muted-foreground leading-relaxed">
+              <div className="space-y-5 text-muted-foreground leading-relaxed text-base">
                 <p>
                   Elle Rosa transforms houses into deeply personal spaces. With an end-to-end approach — from initial concept through design and build — every project is crafted with intention, precision, and a bold sense of style.
                 </p>
@@ -122,12 +136,15 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-6"><div className="border-t border-border" /></div>
+
       {/* Services */}
-      <section id="services" className="py-24 md:py-32 bg-secondary/50">
+      <section id="services" className="py-28 md:py-40 bg-card">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="text-center mb-16">
-            <p className="text-primary tracking-[0.3em] uppercase text-sm mb-4">Services</p>
-            <h2 className="text-4xl md:text-5xl font-semibold">What We Do</h2>
+          <div className="text-center mb-20">
+            <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Services</p>
+            <h2 className="text-3xl md:text-[32px] font-semibold">What We Do</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
             {services.map((service) => (
@@ -144,13 +161,16 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-6"><div className="border-t border-border" /></div>
+
       {/* Portfolio */}
-      <section id="portfolio" className="py-24 md:py-32">
+      <section id="portfolio" className="py-28 md:py-40">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center">
-            <p className="text-primary tracking-[0.3em] uppercase text-sm mb-4">Selected Work</p>
-            <h2 className="text-4xl md:text-5xl font-semibold mb-8">Portfolio</h2>
-            <div className="py-20 border border-border bg-secondary/30">
+            <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Selected Work</p>
+            <h2 className="text-3xl md:text-[32px] font-semibold mb-8">Portfolio</h2>
+            <div className="py-20 border border-border bg-card">
               <p className="text-muted-foreground text-lg italic font-['Playfair_Display']">Coming Soon</p>
               <p className="text-muted-foreground/70 text-sm mt-2">Our latest projects will be showcased here.</p>
             </div>
@@ -158,15 +178,18 @@ const Index = () => {
         </div>
       </section>
 
+      {/* Divider */}
+      <div className="max-w-7xl mx-auto px-6"><div className="border-t border-border" /></div>
+
       {/* Contact */}
-      <section id="contact" className="py-24 md:py-32 bg-secondary/50">
+      <section id="contact" className="py-28 md:py-40 bg-card">
         <div className="max-w-7xl mx-auto px-6">
           <div className="max-w-xl">
-            <p className="text-primary tracking-[0.3em] uppercase text-sm mb-4">Get in Touch</p>
-            <h2 className="text-4xl md:text-5xl font-semibold mb-8">
+            <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Get in Touch</p>
+            <h2 className="text-3xl md:text-[32px] font-semibold mb-8 leading-snug">
               Let's Create Something <span className="italic">Beautiful</span>
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-10">
+            <p className="text-muted-foreground leading-relaxed mb-10 text-base">
               Ready to transform your space? Get in touch and let's bring your vision to life.
             </p>
             <div className="space-y-6">
