@@ -7,22 +7,22 @@ import portraitImage from "@/assets/designer-portrait.jpg";
 const navLinks = ["About", "Services", "Portfolio", "Contact"];
 
 const services = [
-  {
-    icon: Home,
-    title: "Layout Design",
-    description: "Crafting the spatial flow and floor plan of your home — maximising light, movement, and function.",
-  },
-  {
-    icon: Paintbrush,
-    title: "Room Design",
-    description: "Curating fixtures, furniture, and finishes to create rooms that feel as good as they look.",
-  },
-  {
-    icon: Hammer,
-    title: "Builder Coordination",
-    description: "Working hand-in-hand with builders to bring the vision to life, on budget and on time.",
-  },
-];
+{
+  icon: Home,
+  title: "Layout Design",
+  description: "Crafting the spatial flow and floor plan of your home — maximising light, movement, and function."
+},
+{
+  icon: Paintbrush,
+  title: "Room Design",
+  description: "Curating fixtures, furniture, and finishes to create rooms that feel as good as they look."
+},
+{
+  icon: Hammer,
+  title: "Builder Coordination",
+  description: "Working hand-in-hand with builders to bring the vision to life, on budget and on time."
+}];
+
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -42,33 +42,33 @@ const Index = () => {
             Elle Rosa <span className="text-primary">Design</span>
           </button>
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <button
-                key={link}
-                onClick={() => scrollToSection(link.toLowerCase())}
-                className="text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300"
-              >
+            {navLinks.map((link) =>
+            <button
+              key={link}
+              onClick={() => scrollToSection(link.toLowerCase())}
+              className="text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors duration-300">
+
                 {link}
               </button>
-            ))}
+            )}
           </div>
           <button className="md:hidden text-foreground" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
         </div>
-        {mobileMenuOpen && (
-          <div className="md:hidden bg-background border-t border-border px-6 py-4 space-y-4">
-            {navLinks.map((link) => (
-              <button
-                key={link}
-                onClick={() => scrollToSection(link.toLowerCase())}
-                className="block w-full text-left text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors"
-              >
+        {mobileMenuOpen &&
+        <div className="md:hidden bg-background border-t border-border px-6 py-4 space-y-4">
+            {navLinks.map((link) =>
+          <button
+            key={link}
+            onClick={() => scrollToSection(link.toLowerCase())}
+            className="block w-full text-left text-sm tracking-widest uppercase text-muted-foreground hover:text-primary transition-colors">
+
                 {link}
               </button>
-            ))}
+          )}
           </div>
-        )}
+        }
       </nav>
 
       {/* Hero — full-screen, centered */}
@@ -88,14 +88,14 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
-            >
+              className="px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300">
+
               Start Your Project
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="px-8 py-3 border border-foreground/30 text-foreground text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors duration-300"
-            >
+              className="px-8 py-3 border border-foreground/30 text-foreground text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors duration-300">
+
               View Portfolio
             </button>
           </div>
@@ -103,8 +103,8 @@ const Index = () => {
         <button
           onClick={() => scrollToSection("about")}
           className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 text-primary animate-bounce"
-          aria-label="Scroll down"
-        >
+          aria-label="Scroll down">
+
           <ChevronDown size={32} />
         </button>
       </section>
@@ -148,16 +148,16 @@ const Index = () => {
             <h2 className="text-3xl md:text-[32px] font-semibold">What We Do</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.title}
-                className="bg-background p-10 border border-border hover:border-primary/50 transition-all duration-500 group"
-              >
+            {services.map((service) =>
+            <div
+              key={service.title}
+              className="bg-background p-10 border border-border hover:border-primary/50 transition-all duration-500 group">
+
                 <service.icon className="w-8 h-8 text-primary mb-6 group-hover:scale-110 transition-transform duration-300" />
                 <h3 className="text-xl font-semibold mb-4 font-['Playfair_Display']">{service.title}</h3>
                 <p className="text-muted-foreground leading-relaxed text-sm">{service.description}</p>
               </div>
-            ))}
+            )}
           </div>
         </div>
       </section>
@@ -197,8 +197,8 @@ const Index = () => {
               <div className="flex items-center gap-3">
                 <a
                   href="mailto:elle@ellerosadesign.com"
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300"
-                >
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300">ELLE@ELLEROSADESIGN.COM
+
                   <Mail className="w-4 h-4" />
                   Email Us
                 </a>
@@ -209,8 +209,8 @@ const Index = () => {
                     setTimeout(() => setCopied(false), 2000);
                   }}
                   className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors duration-300"
-                  aria-label="Copy email to clipboard"
-                >
+                  aria-label="Copy email to clipboard">
+
                   {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
                 </button>
               </div>
@@ -231,14 +231,14 @@ const Index = () => {
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-          >
+            className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors">
+
             Back to Top <ArrowUp size={14} />
           </button>
         </div>
       </footer>
-    </div>
-  );
+    </div>);
+
 };
 
 export default Index;
