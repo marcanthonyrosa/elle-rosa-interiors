@@ -82,12 +82,9 @@ const Index = () => {
             Elle Rosa <span className="text-primary">Design</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 font-['Playfair_Display'] text-foreground/90">
-            Homes designed to actually live in.
+            Homes designed for busy families to actually live in.
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-            Beautiful spaces for busy families — from the floor plan to the final finish.
-          </p>
-          <p className="text-sm md:text-base text-muted-foreground/80 max-w-xl mx-auto mb-10 leading-relaxed">
             I handle every detail — from the floor plan to the final finish — so you don't have to.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
