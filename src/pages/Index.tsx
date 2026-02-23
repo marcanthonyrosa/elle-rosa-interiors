@@ -78,10 +78,12 @@ const Index = () => {
           <div className="absolute inset-0 bg-background/70" />
         </div>
         <div className="relative z-10 max-w-3xl mx-auto px-6">
-          <p className="text-primary tracking-[0.4em] uppercase text-xs mb-8">Elle Rosa Design</p>
           <h1 className="text-5xl md:text-6xl lg:text-[64px] font-semibold leading-[1.1] mb-6 font-['Playfair_Display']">
-            Timeless, livable interiors designed around real life.
+            Elle Rosa <span className="text-primary">Design</span>
           </h1>
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 font-['Playfair_Display'] text-foreground/90">
+            Timeless, livable interiors designed around real life.
+          </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
             Full-service residential design for busy families who want beautiful spaces without the overwhelm.
           </p>
