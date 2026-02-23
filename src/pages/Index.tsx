@@ -10,17 +10,17 @@ const services = [
 {
   icon: Home,
   title: "Layout Design",
-  description: "The floor plan is the most important decision you'll make — and most people don't realize it until it's too late. I partner with your builder from the start to make sure your home flows the way your family actually lives: where the light lands in the morning, whether the kids' rooms are close enough (or far enough), how the kitchen connects to everything else."
+  description: "The floor plan shapes everything. I work with your builder early — before walls go up — to make sure your home flows the way your family actually lives."
 },
 {
   icon: Paintbrush,
   title: "Room Design",
-  description: "This is where a house becomes yours. I make all the styling calls — furniture, fixtures, finishes, fabrics — and I make them as a package, not a pile of individual choices. Everything works together because I design it that way from the start."
+  description: "Furniture, fixtures, finishes, fabrics. I make every styling call as a cohesive whole, so nothing feels random and everything feels intentional."
 },
 {
   icon: Hammer,
   title: "Builder Coordination",
-  description: "Here's where a lot of design projects fall apart: the gap between what was designed and what actually gets built. I stay on-site, in communication, and in the details all the way through delivery — so what you move into matches what we designed. No surprises. No \"close enough.\""
+  description: "I stay in it all the way through delivery — so what you move into actually matches what we designed."
 }];
 
 
