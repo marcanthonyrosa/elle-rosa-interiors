@@ -10,17 +10,17 @@ const services = [
 {
   icon: Home,
   title: "Layout Design",
-  description: "Crafting the spatial flow and floor plan of your home — maximising light, movement, and function."
+  description: "The floor plan shapes everything. I work with your builder early — before walls go up — to make sure your home flows the way your family actually lives."
 },
 {
   icon: Paintbrush,
   title: "Room Design",
-  description: "Curating fixtures, furniture, and finishes to create rooms that feel as good as they look."
+  description: "Furniture, fixtures, finishes, fabrics. I make every styling call as a cohesive whole, so nothing feels random and everything feels intentional."
 },
 {
   icon: Hammer,
   title: "Builder Coordination",
-  description: "Working hand-in-hand with builders to bring the vision to life, on budget and on time."
+  description: "I stay in it all the way through delivery — so what you move into actually matches what we designed."
 }];
 
 
@@ -82,10 +82,10 @@ const Index = () => {
             Elle Rosa <span className="text-primary">Design</span>
           </h1>
           <h2 className="text-xl md:text-2xl lg:text-3xl font-medium mb-6 font-['Playfair_Display'] text-foreground/90">
-            Timeless, livable interiors designed around real life.
+            Homes designed for busy families to actually live in.
           </h2>
           <p className="text-base md:text-lg text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-            Full-service residential design for busy families who want beautiful spaces without the overwhelm.
+            I handle every detail — from the floor plan to the final finish — so you don't have to.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
@@ -128,10 +128,16 @@ const Index = () => {
               </h2>
               <div className="space-y-5 text-muted-foreground leading-relaxed text-base">
                 <p>
-                  Elle Rosa transforms houses into deeply personal spaces. With an end-to-end approach — from initial concept through design and build — every project is crafted with intention, precision, and a bold sense of style.
+                  I started Elle Rosa Design because I believe your home should feel like you — not a catalogue, not a trend, not someone else's idea of beautiful.
                 </p>
                 <p>
-                  Each home tells its owner's story. Elle works closely with clients and builders to ensure that story is told beautifully, on time, and without compromise.
+                  I work with families building new homes or renovating the one they're already in. I get into it early — working alongside your builder on the layout itself — because the best design decisions happen before the walls go up, not after.
+                </p>
+                <p>
+                  From floor plan to furniture to the final walkthrough, I stay in it until it's right.
+                </p>
+                <p>
+                  As a mom, I design with real life in mind — because I know what it actually takes to keep a home looking good while people are living in it.
                 </p>
               </div>
             </div>
@@ -190,10 +196,10 @@ const Index = () => {
           <div className="text-center">
             <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Get in Touch</p>
             <h2 className="text-3xl md:text-[32px] font-semibold mb-8 leading-snug">
-              Let's Create Something <span className="italic">Beautiful</span>
+              Let's figure out what your home <span className="italic">needs.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-10 text-base max-w-xl mx-auto">
-              Ready to transform your space? Get in touch and let's bring your vision to life.
+              Every project starts with a conversation. Tell me where you are in the process — even if it's just an idea — and we'll go from there.
             </p>
             <div className="flex flex-col items-center gap-6">
               <div className="flex items-center gap-3">
