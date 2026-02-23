@@ -199,10 +199,9 @@ const Index = () => {
               <div className="flex items-center gap-3">
                 <a
                   href="mailto:elle@ellerosadesign.com"
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300">ELLE@ELLEROSADESIGN.COM
-
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground text-sm tracking-wider hover:bg-primary/90 transition-colors duration-300">
                   <Mail className="w-4 h-4" />
-                  Email Us
+                  elle@ellerosadesign.com
                 </a>
                 <button
                   onClick={() => {
