@@ -2,10 +2,10 @@ import { useState } from "react";
 import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin, Copy, Check } from "lucide-react";
 
 import heroImage from "@/assets/hero-interior.jpg";
-import portraitImage from "@/assets/kitchen.png";
+import portraitImage from "@/assets/Kitchen-1.png";
 
 const navLinks = ["About", "Services", "Portfolio", "Contact"];
-
+5
 const services = [
 {
   icon: Home,
@@ -234,7 +234,7 @@ const Index = () => {
       <footer className="border-t border-border py-12">
         <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
           <p className="font-['Playfair_Display'] text-sm text-muted-foreground">
-            © 2025 Elle Rosa Interior Design. All rights reserved.
+            © 2026 Elle Rosa Design. All rights reserved.
           </p>
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
