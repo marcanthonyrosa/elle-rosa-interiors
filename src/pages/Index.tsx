@@ -90,13 +90,13 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <button
               onClick={() => scrollToSection("contact")}
-              className="px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase hover:bg-primary/90 transition-colors duration-300">
+              className="px-8 py-3 bg-primary text-primary-foreground text-sm tracking-widest uppercase rounded-lg shadow-md hover:shadow-lg hover:bg-primary/90 transition-all duration-300">
 
               Start Your Project
             </button>
             <button
               onClick={() => scrollToSection("portfolio")}
-              className="px-8 py-3 border border-foreground/30 text-foreground text-sm tracking-widest uppercase hover:border-primary hover:text-primary transition-colors duration-300">
+              className="px-8 py-3 bg-background text-foreground text-sm tracking-widest uppercase rounded-lg shadow-md hover:shadow-lg hover:text-primary transition-all duration-300">
 
               View Portfolio
             </button>
@@ -205,7 +205,7 @@ const Index = () => {
               <div className="flex items-center gap-3">
                 <a
                   href="mailto:elle@ellerosadesign.com"
-                  className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground text-sm tracking-wider hover:bg-primary/90 transition-colors duration-300">
+                  className="inline-flex items-center gap-2 px-8 py-3 bg-primary text-primary-foreground text-sm tracking-wider rounded-lg shadow-md hover:shadow-lg hover:bg-primary/90 transition-all duration-300">
                   <Mail className="w-4 h-4" />
                   elle@ellerosadesign.com
                 </a>
@@ -215,7 +215,7 @@ const Index = () => {
                     setCopied(true);
                     setTimeout(() => setCopied(false), 2000);
                   }}
-                  className="p-3 border border-border hover:border-primary text-muted-foreground hover:text-primary transition-colors duration-300"
+                  className="p-3 bg-muted text-muted-foreground rounded-lg shadow-md hover:shadow-lg hover:text-primary transition-all duration-300"
                   aria-label="Copy email to clipboard">
 
                   {copied ? <Check className="w-4 h-4" /> : <Copy className="w-4 h-4" />}
