@@ -215,15 +215,15 @@ const Index = () => {
                       <div className="aspect-[16/9] overflow-hidden">
                         <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                       </div>
-                      <div className="text-center mt-6">
+                      <div className="text-left mt-6">
                         <h3 className="text-xl md:text-2xl font-semibold font-['Playfair_Display'] mb-2">{item.title}</h3>
-                        <p className="text-muted-foreground text-sm md:text-base max-w-xl mx-auto leading-relaxed">{item.description}</p>
+                        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">{item.description}</p>
                       </div>
                     </CarouselItem>
                   ))}
                 </CarouselContent>
-                <CarouselPrevious className="left-4 top-[calc(50%-40px)]" />
-                <CarouselNext className="right-4 top-[calc(50%-40px)]" />
+                <CarouselPrevious className="left-4 top-[calc(50%-40px)] h-10 w-10" />
+                <CarouselNext className="right-4 top-[calc(50%-40px)] h-10 w-10" />
               </Carousel>
               <div className="flex justify-center gap-2 mt-8">
                 {Array.from({ length: slideCount }).map((_, i) => (
