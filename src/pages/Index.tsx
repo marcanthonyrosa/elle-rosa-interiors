@@ -211,8 +211,8 @@ const Index = () => {
             <div className="max-w-5xl mx-auto">
               <Carousel setApi={setCarouselApi} opts={{ loop: true }} plugins={[Fade()]} className="w-full">
                 <CarouselContent>
-                  {portfolioItems.map((item) => (
-                    <CarouselItem key={item.title}>
+                  {portfolioItems.map((item, index) => (
+                    <CarouselItem key={item.title} className={`transition-opacity duration-500 ${index === currentSlide ? 'opacity-100' : 'opacity-0 pointer-events-none select-none'}`}>
                       <div className="aspect-[16/9] overflow-hidden">
                         <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
                       </div>
