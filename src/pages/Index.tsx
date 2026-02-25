@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin, Copy, Check } from "lucide-react";
+import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
+import Fade from "embla-carousel-fade";
 
 import heroImage from "@/assets/hero-interior.jpg";
 import portraitImage from "@/assets/kitchen-1.png";
+import portfolio1 from "@/assets/portfolio-1.jpg";
+import portfolio2 from "@/assets/portfolio-2.jpg";
+import portfolio3 from "@/assets/portfolio-3.jpg";
+import portfolio4 from "@/assets/portfolio-4.jpg";
 
 const navLinks = ["About", "Services", "Portfolio", "Contact"];
 5
@@ -23,10 +29,33 @@ const services = [
   description: "I stay in it all the way through delivery — so what you move into actually matches what we designed."
 }];
 
+const portfolioItems = [
+  { image: portfolio1, title: "Modern Family Retreat", description: "A full home redesign for a family of five — open-plan living, warm textures, and kid-proof finishes that still feel elevated." },
+  { image: portfolio2, title: "River Oaks Revival", description: "A dated 1990s build transformed into a bright, layered home with custom millwork and statement lighting throughout." },
+  { image: portfolio3, title: "The Heights Renovation", description: "A thoughtful renovation balancing original charm with modern function — designed for a young couple who love to entertain." },
+  { image: portfolio4, title: "Memorial New Build", description: "Collaborated with the builder from day one to shape a layout that puts family life at the center of every room." },
+];
 
 const Index = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [copied, setCopied] = useState(false);
+  const [carouselApi, setCarouselApi] = useState<CarouselApi>();
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [slideCount, setSlideCount] = useState(0);
+
+  const onSelect = useCallback(() => {
+    if (!carouselApi) return;
+    setCurrentSlide(carouselApi.selectedScrollSnap());
+    setSlideCount(carouselApi.scrollSnapList().length);
+  }, [carouselApi]);
+
+  useEffect(() => {
+    if (!carouselApi) return;
+    onSelect();
+    carouselApi.on("select", onSelect);
+    carouselApi.on("reInit", onSelect);
+    return () => { carouselApi.off("select", onSelect); };
+  }, [carouselApi, onSelect]);
 
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
@@ -179,9 +208,34 @@ const Index = () => {
           <div className="text-center">
             <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Selected Work</p>
             <h2 className="text-3xl md:text-[32px] font-semibold mb-8">Portfolio</h2>
-            <div className="py-20 border border-border bg-card">
-              <p className="text-muted-foreground text-lg italic font-['Playfair_Display']">Coming Soon</p>
-              <p className="text-muted-foreground/70 text-sm mt-2">Our latest projects will be showcased here.</p>
+            <div className="max-w-5xl mx-auto">
+              <Carousel setApi={setCarouselApi} opts={{ loop: true, watchDrag: false }} plugins={[Fade()]} className="w-full">
+                <CarouselContent>
+                  {portfolioItems.map((item, index) => (
+                    <CarouselItem key={item.title} style={{ visibility: index === currentSlide ? 'visible' : 'hidden' }}>
+                      <div className="aspect-[16/9] overflow-hidden">
+                        <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                      </div>
+                      <div className="text-left mt-6">
+                        <h3 className="text-xl md:text-2xl font-semibold font-['Playfair_Display'] mb-2">{item.title}</h3>
+                        <p className="text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">{item.description}</p>
+                      </div>
+                    </CarouselItem>
+                  ))}
+                </CarouselContent>
+                <CarouselPrevious className="left-4 top-[calc(50%-40px)] h-10 w-10" />
+                <CarouselNext className="right-4 top-[calc(50%-40px)] h-10 w-10" />
+              </Carousel>
+              <div className="flex justify-center gap-2 mt-8">
+                {Array.from({ length: slideCount }).map((_, i) => (
+                  <button
+                    key={i}
+                    onClick={() => carouselApi?.scrollTo(i)}
+                    className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${i === currentSlide ? "bg-primary scale-110" : "bg-border hover:bg-muted-foreground/50"}`}
+                    aria-label={`Go to slide ${i + 1}`}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
