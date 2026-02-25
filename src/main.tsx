@@ -4,7 +4,7 @@ import "./index.css";
 
 import posthog from 'posthog-js'
 
-posthog.init('phc_BHIQDrEpBMTu5QQ6fD6mhPVlJ9gVJ79jEXxjcFSck8T', {
+posthog.init(import.meta.env.VITE_POSTHOG_KEY, {
   api_host: 'https://us.i.posthog.com',
 })
 
