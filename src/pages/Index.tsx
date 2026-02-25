@@ -209,7 +209,7 @@ const Index = () => {
             <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Selected Work</p>
             <h2 className="text-3xl md:text-[32px] font-semibold mb-8">Portfolio</h2>
             <div className="max-w-5xl mx-auto">
-              <Carousel setApi={setCarouselApi} opts={{ loop: true }} plugins={[Fade()]} className="w-full">
+              <Carousel setApi={setCarouselApi} opts={{ loop: true, watchDrag: false }} plugins={[Fade()]} className="w-full">
                 <CarouselContent>
                   {portfolioItems.map((item, index) => (
                     <CarouselItem key={item.title} style={{ visibility: index === currentSlide ? 'visible' : 'hidden' }}>
