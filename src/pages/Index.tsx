@@ -1,6 +1,7 @@
 import { useState, useCallback, useEffect } from "react";
 import { Menu, X, ArrowUp, ChevronDown, Home, Paintbrush, Hammer, Mail, MapPin, Copy, Check } from "lucide-react";
 import { Carousel, CarouselContent, CarouselItem, CarouselPrevious, CarouselNext, type CarouselApi } from "@/components/ui/carousel";
+import Fade from "embla-carousel-fade";
 
 import heroImage from "@/assets/hero-interior.jpg";
 import portraitImage from "@/assets/kitchen-1.png";
@@ -208,7 +209,7 @@ const Index = () => {
             <p className="text-primary tracking-[0.3em] uppercase text-xs mb-4">Selected Work</p>
             <h2 className="text-3xl md:text-[32px] font-semibold mb-8">Portfolio</h2>
             <div className="max-w-5xl mx-auto">
-              <Carousel setApi={setCarouselApi} className="w-full">
+              <Carousel setApi={setCarouselApi} opts={{ loop: true }} plugins={[Fade()]} className="w-full">
                 <CarouselContent>
                   {portfolioItems.map((item) => (
                     <CarouselItem key={item.title}>
