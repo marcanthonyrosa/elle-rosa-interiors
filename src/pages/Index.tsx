@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import primaryBedroomMoodboard from "@/assets/primary-bedroom-moodboard.png";
 import powderRoomMoodboard from "@/assets/powder-room-moodboard.png";
 import bedroom1Moodboard from "@/assets/bedroom1-moodboard.png";
@@ -12,6 +12,49 @@ const NAV_LINKS = [
   { href: "#journal", label: "Journal" },
   { href: "#inquire", label: "Inquire" },
 ];
+
+type MoodboardFigureProps = {
+  src: string;
+  alt: string;
+  plate: string;
+  className?: string;
+};
+
+const MoodboardFigure = ({ src, alt, plate, className }: MoodboardFigureProps) => {
+  const imgRef = useRef<HTMLImageElement>(null);
+  const [loaded, setLoaded] = useState(false);
+
+  useEffect(() => {
+    const img = imgRef.current;
+    if (img && img.complete && img.naturalWidth > 0) {
+      setLoaded(true);
+    }
+  }, []);
+
+  return (
+    <figure className={`figure${className ? ` ${className}` : ""}`}>
+      <div className="moodboard-skeleton" data-loaded={loaded}>
+        <span className="moodboard-skeleton-corner moodboard-skeleton-corner--tl" aria-hidden="true" />
+        <span className="moodboard-skeleton-corner moodboard-skeleton-corner--tr" aria-hidden="true" />
+        <span className="moodboard-skeleton-corner moodboard-skeleton-corner--bl" aria-hidden="true" />
+        <span className="moodboard-skeleton-corner moodboard-skeleton-corner--br" aria-hidden="true" />
+        <div className="moodboard-skeleton-stack">
+          <p className="moodboard-skeleton-label">Plate forthcoming</p>
+          <p className="moodboard-skeleton-dots" aria-hidden="true">· · · · · ·</p>
+          <p className="moodboard-skeleton-plate">{plate}</p>
+        </div>
+      </div>
+      <img
+        ref={imgRef}
+        src={src}
+        alt={alt}
+        className="moodboard"
+        data-loaded={loaded}
+        onLoad={() => setLoaded(true)}
+      />
+    </figure>
+  );
+};
 
 const Index = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -89,13 +132,11 @@ const Index = () => {
 
       {/* HERO — PRIMARY BEDROOM RENDERING */}
       <section className="fold fold--hero" id="work">
-        <figure className="figure">
-          <img
-            src={primaryBedroomRendering}
-            alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
-            className="moodboard"
-          />
-        </figure>
+        <MoodboardFigure
+          src={primaryBedroomRendering}
+          alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
+          plate="No. 01"
+        />
         <div className="hero-caption-strip">
           <span className="hero-caption-plate">No. 01</span>
           <h2 className="hero-caption-title">The Cottage — Primary bedroom</h2>
@@ -121,13 +162,11 @@ const Index = () => {
 
       {/* PLATE — POWDER ROOM */}
       <section className="fold fold--plate" id="process">
-        <figure className="figure">
-          <img
-            src={powderRoomMoodboard}
-            alt="The Cottage — powder room mood board. A small bathroom with pale blue Queen Anne's lace botanical wallpaper, white beadboard wainscoting, a white pedestal sink, cane-front cabinetry, scalloped sconces, and a scalloped jute rug."
-            className="moodboard"
-          />
-        </figure>
+        <MoodboardFigure
+          src={powderRoomMoodboard}
+          alt="The Cottage — powder room mood board. A small bathroom with pale blue Queen Anne's lace botanical wallpaper, white beadboard wainscoting, a white pedestal sink, cane-front cabinetry, scalloped sconces, and a scalloped jute rug."
+          plate="No. 02"
+        />
         <div className="plate-annotation">
           <p className="plate-number">No. 02</p>
           <h2 className="plate-title">
@@ -167,13 +206,11 @@ const Index = () => {
 
       {/* PLATE — BEDROOM 1 (REVERSE) */}
       <section className="fold fold--plate fold--plate--reverse">
-        <figure className="figure">
-          <img
-            src={bedroom1Moodboard}
-            alt="The Cottage — Bedroom 1 mood board. A guest bedroom with a spool-turned walnut spindle bed, butter-yellow quilted bedding, scalloped wicker bedside lamps, and a gallery wall of mixed framed artwork."
-            className="moodboard"
-          />
-        </figure>
+        <MoodboardFigure
+          src={bedroom1Moodboard}
+          alt="The Cottage — Bedroom 1 mood board. A guest bedroom with a spool-turned walnut spindle bed, butter-yellow quilted bedding, scalloped wicker bedside lamps, and a gallery wall of mixed framed artwork."
+          plate="No. 03"
+        />
         <div className="plate-annotation">
           <p className="plate-number">No. 03</p>
           <h2 className="plate-title">
@@ -199,13 +236,11 @@ const Index = () => {
 
       {/* PLATE — BEDROOM 2 */}
       <section className="fold fold--plate">
-        <figure className="figure">
-          <img
-            src={bedroom2Moodboard}
-            alt="The Cottage — Bedroom 2 mood board. A guest bedroom with a mid-century walnut spindle bed, brass dome bedside lamps, a pink floral quilt over sage linen sheets, a green-and-cream geometric area rug, and two architectural sketches in narrow frames above the bed."
-            className="moodboard"
-          />
-        </figure>
+        <MoodboardFigure
+          src={bedroom2Moodboard}
+          alt="The Cottage — Bedroom 2 mood board. A guest bedroom with a mid-century walnut spindle bed, brass dome bedside lamps, a pink floral quilt over sage linen sheets, a green-and-cream geometric area rug, and two architectural sketches in narrow frames above the bed."
+          plate="No. 04"
+        />
         <div className="plate-annotation">
           <p className="plate-number">No. 04</p>
           <h2 className="plate-title">
@@ -230,13 +265,11 @@ const Index = () => {
 
       {/* PLATE — PRIMARY BEDROOM MOOD BOARD */}
       <section className="fold fold--plate fold--plate--reverse">
-        <figure className="figure">
-          <img
-            src={primaryBedroomMoodboard}
-            alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
-            className="moodboard"
-          />
-        </figure>
+        <MoodboardFigure
+          src={primaryBedroomMoodboard}
+          alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
+          plate="No. 05"
+        />
         <div className="plate-annotation">
           <p className="plate-number">No. 05</p>
           <h2 className="plate-title">

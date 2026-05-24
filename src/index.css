@@ -122,6 +122,138 @@ a:focus-visible {
   isolation: isolate;
 }
 
+/* ============================================
+   PLATE TK — Editorial skeleton for mood boards
+   ============================================ */
+.moodboard-skeleton {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: var(--color-paper-3);
+  overflow: hidden;
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 500ms var(--ease-out);
+  z-index: 1;
+}
+
+.moodboard-skeleton[data-loaded="true"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.figure:has(.moodboard-skeleton) .moodboard {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 600ms var(--ease-out);
+}
+
+.figure:has(.moodboard-skeleton) .moodboard[data-loaded="true"] {
+  opacity: 1;
+}
+
+.moodboard-skeleton-corner {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  pointer-events: none;
+}
+
+.moodboard-skeleton-corner--tl {
+  top: 16px;
+  left: 16px;
+  border-top: 1px solid var(--color-rule-firm);
+  border-left: 1px solid var(--color-rule-firm);
+}
+
+.moodboard-skeleton-corner--tr {
+  top: 16px;
+  right: 16px;
+  border-top: 1px solid var(--color-rule-firm);
+  border-right: 1px solid var(--color-rule-firm);
+}
+
+.moodboard-skeleton-corner--bl {
+  bottom: 16px;
+  left: 16px;
+  border-bottom: 1px solid var(--color-rule-firm);
+  border-left: 1px solid var(--color-rule-firm);
+}
+
+.moodboard-skeleton-corner--br {
+  bottom: 16px;
+  right: 16px;
+  border-bottom: 1px solid var(--color-rule-firm);
+  border-right: 1px solid var(--color-rule-firm);
+}
+
+.moodboard-skeleton-stack {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-xs);
+  text-align: center;
+  padding: var(--space-md);
+}
+
+.moodboard-skeleton-label {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-variation-settings: var(--var-body);
+  font-feature-settings: "ss01", "salt";
+  font-size: var(--text-base);
+  color: var(--color-ink-soft);
+  line-height: 1;
+}
+
+.moodboard-skeleton-dots {
+  font-family: var(--font-body);
+  font-size: 10px;
+  letter-spacing: 0.32em;
+  color: var(--color-accent);
+  opacity: 0.5;
+  line-height: 1;
+}
+
+.moodboard-skeleton-plate {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 500;
+  font-variation-settings: var(--var-body);
+  font-feature-settings: "ss01", "swsh";
+  font-size: var(--text-xl);
+  color: var(--color-ink-mute);
+  line-height: 1;
+}
+
+.moodboard-skeleton::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 30%,
+    oklch(93.5% 0.025 78 / 0.65) 50%,
+    transparent 70%
+  );
+  background-size: 200% 100%;
+  background-repeat: no-repeat;
+  background-position: 200% 0;
+  pointer-events: none;
+  animation: moodboard-skeleton-shimmer 3500ms var(--ease-out) infinite;
+}
+
+@keyframes moodboard-skeleton-shimmer {
+  from { background-position: 200% 0; }
+  to   { background-position: -100% 0; }
+}
+
 .figure-caption {
   position: absolute;
   bottom: var(--space-sm);
