@@ -1,19 +1,39 @@
+import { useEffect, useState } from "react";
 import primaryBedroomMoodboard from "@/assets/primary-bedroom-moodboard.png";
 import powderRoomMoodboard from "@/assets/powder-room-moodboard.png";
 import bedroom1Moodboard from "@/assets/bedroom1-moodboard.png";
 import bedroom2Moodboard from "@/assets/bedroom2-moodboard.png";
 import primaryBedroomRendering from "@/assets/primary-bedroom-rendering-moodboard.png";
 
+const NAV_LINKS = [
+  { href: "#work", label: "The Work" },
+  { href: "#process", label: "The Process" },
+  { href: "#studio", label: "The Studio" },
+  { href: "#journal", label: "Journal" },
+  { href: "#inquire", label: "Inquire" },
+];
+
 const Index = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    if (!menuOpen) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setMenuOpen(false);
+    };
+    document.addEventListener("keydown", onKey);
+    const prevOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKey);
+      document.body.style.overflow = prevOverflow;
+    };
+  }, [menuOpen]);
+
   return (
     <>
       {/* N6 NEWSPAPER MASTHEAD */}
       <header className="masthead">
-        <div className="masthead-rule-top">
-          <span>Volume One</span>
-          <span>Houston, Texas</span>
-          <span>MMXX — present</span>
-        </div>
         <h1 className="masthead-mark">Elle Rosa Design</h1>
         <div className="masthead-mark-rule" />
         <p className="masthead-descriptor">
@@ -22,17 +42,50 @@ const Index = () => {
           A studio practice
         </p>
         <nav className="masthead-nav" aria-label="Primary">
-          <a href="#work">The Work</a>
-          <span className="ornament" aria-hidden="true" />
-          <a href="#process">The Process</a>
-          <span className="ornament" aria-hidden="true" />
-          <a href="#studio">The Studio</a>
-          <span className="ornament" aria-hidden="true" />
-          <a href="#journal">Journal</a>
-          <span className="ornament" aria-hidden="true" />
-          <a href="#inquire">Inquire</a>
+          {NAV_LINKS.map((link) => (
+            <a key={link.href} href={link.href}>
+              {link.label}
+            </a>
+          ))}
         </nav>
+        <button
+          type="button"
+          className="masthead-menu-toggle"
+          aria-expanded={menuOpen}
+          aria-controls="masthead-menu"
+          onClick={() => setMenuOpen(true)}
+        >
+          Menu
+        </button>
       </header>
+
+      <div
+        id="masthead-menu"
+        className={`masthead-menu${menuOpen ? " is-open" : ""}`}
+        aria-hidden={!menuOpen}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Primary navigation"
+      >
+        <button
+          type="button"
+          className="masthead-menu-close"
+          onClick={() => setMenuOpen(false)}
+        >
+          Close
+        </button>
+        <nav className="masthead-menu-nav" aria-label="Primary, expanded">
+          {NAV_LINKS.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              onClick={() => setMenuOpen(false)}
+            >
+              {link.label}
+            </a>
+          ))}
+        </nav>
+      </div>
 
       {/* HERO — PRIMARY BEDROOM RENDERING */}
       <section className="fold fold--hero" id="work">
