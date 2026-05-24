@@ -1,6 +1,7 @@
 import primaryBedroomMoodboard from "@/assets/primary-bedroom-moodboard.png";
 import powderRoomMoodboard from "@/assets/powder-room-moodboard.png";
 import bedroom1Moodboard from "@/assets/bedroom1-moodboard.png";
+import bedroom2Moodboard from "@/assets/bedroom2-moodboard.png";
 import primaryBedroomRendering from "@/assets/primary-bedroom-rendering-moodboard.png";
 
 const Index = () => {
@@ -33,12 +34,12 @@ const Index = () => {
         </nav>
       </header>
 
-      {/* HERO — PRIMARY BEDROOM MOOD BOARD */}
+      {/* HERO — PRIMARY BEDROOM RENDERING */}
       <section className="fold fold--hero" id="work">
         <figure className="figure">
           <img
-            src={primaryBedroomMoodboard}
-            alt="The Cottage — primary bedroom mood board. A bedroom with walls in Benjamin Moore Manor Blue, an Andrew Wyeth painting above an upholstered four-poster bed, walnut nightstands, sliding doors opening to a lake view."
+            src={primaryBedroomRendering}
+            alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
             className="moodboard"
           />
         </figure>
@@ -143,17 +144,48 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PLATE — PRIMARY BEDROOM RENDERING */}
-      <section className="fold fold--plate fold--plate--reverse">
+      {/* PLATE — BEDROOM 2 */}
+      <section className="fold fold--plate">
         <figure className="figure">
           <img
-            src={primaryBedroomRendering}
-            alt="The Cottage — primary bedroom mood board, second view. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
+            src={bedroom2Moodboard}
+            alt="The Cottage — Bedroom 2 mood board. A guest bedroom with a mid-century walnut spindle bed, brass dome bedside lamps, a pink floral quilt over sage linen sheets, a green-and-cream geometric area rug, and two architectural sketches in narrow frames above the bed."
             className="moodboard"
           />
         </figure>
         <div className="plate-annotation">
           <p className="plate-number">No. 04</p>
+          <h2 className="plate-title">
+            The quieter sibling, with floral and sage.
+          </h2>
+          <p className="plate-body">
+            A mid-century walnut spindle bed, brass dome bedside lamps, two
+            architectural sketches in narrow frames. Pink floral quilt over sage
+            linen sheets, a green-and-cream geometric rug. The room is quieter than
+            its sibling next door — meant for the guest who wants to read a book in
+            the afternoon, not be performed at.
+          </p>
+          <p className="plate-meta">
+            Bedroom two
+            <span className="sep">&middot;</span>
+            The Cottage
+            <span className="sep">&middot;</span>
+            Thousand Islands
+          </p>
+        </div>
+      </section>
+
+      {/* PLATE — PRIMARY BEDROOM MOOD BOARD */}
+      <section className="fold fold--plate fold--plate--reverse">
+        <figure className="figure">
+          <img
+            src={primaryBedroomMoodboard}
+            alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
+            className="moodboard"
+          />
+        </figure>
+        <div className="plate-annotation">
+          <p className="plate-number">No. 05</p>
           <h2 className="plate-title">
             Manor Blue, a Wyeth, and the water beyond.
           </h2>
