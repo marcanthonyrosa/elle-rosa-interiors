@@ -142,7 +142,7 @@ const Index = () => {
           <p className="hero-caption-meta">
             Mood board
             <span className="sep">&middot;</span>
-            Thousand Islands
+            Wellesley Island
             <span className="sep">&middot;</span>
             In progress
           </p>
@@ -153,8 +153,9 @@ const Index = () => {
       <section className="fold fold--text">
         <div className="text-fold-inner">
           <p className="text-fold-lede">
-            Elle Rosa Design is a residential studio in Houston, Texas — building
-            homes that feel as if they have <em>always been there</em>.
+            Elle Rosa Design is a residential studio based in Houston, Texas,
+            with projects across the country, creating homes that feel as though
+            they have always been there.
           </p>
         </div>
       </section>
@@ -165,7 +166,7 @@ const Index = () => {
           <p className="project-masthead-eyebrow">
             Featured project
             <span className="sep">&middot;</span>
-            Thousand Islands, N.Y.
+            Wellesley Island, N.Y.
           </p>
           <div className="project-masthead-rule" aria-hidden="true">
             <span className="project-masthead-rule-ornament">&loz;</span>
@@ -209,7 +210,7 @@ const Index = () => {
             <span className="sep">&middot;</span>
             The Cottage
             <span className="sep">&middot;</span>
-            Thousand Islands
+            Wellesley Island
           </p>
         </div>
       </section>
@@ -254,7 +255,7 @@ const Index = () => {
             <span className="sep">&middot;</span>
             The Cottage
             <span className="sep">&middot;</span>
-            Thousand Islands
+            Wellesley Island
           </p>
         </div>
       </section>
@@ -283,7 +284,7 @@ const Index = () => {
             <span className="sep">&middot;</span>
             The Cottage
             <span className="sep">&middot;</span>
-            Thousand Islands
+            Wellesley Island
           </p>
         </div>
       </section>
@@ -313,7 +314,7 @@ const Index = () => {
             <span className="sep">&middot;</span>
             The Cottage
             <span className="sep">&middot;</span>
-            Thousand Islands
+            Wellesley Island
           </p>
         </div>
       </section>
@@ -323,23 +324,36 @@ const Index = () => {
         <div className="letter-inner">
           <p className="letter-salutation">A note from the studio.</p>
           <p className="letter-prose">
-            The Cottage is the first project we are sharing publicly. It is a summer
-            home on the Thousand Islands being re-imagined for a family who has been
-            gathering there across generations — and finished the way every project
-            here will be finished:{" "}
-            <em>one decision, one material, one room at a time</em>.
+            The Cottage is a historic family home on Wellesley Island, New York,
+            originally built in 1879. This project required exceptional care and
+            sensitivity to preserve not only the home's historic character, but also
+            the nostalgia and memories woven into it over generations. The goal was to
+            thoughtfully introduce modern conveniences and elevated design while
+            honoring the spirit of the house itself. Elle worked closely with the
+            owners to preserve the elements that make The Cottage so meaningful.
           </p>
           <p className="letter-prose">
-            I began this practice because I believe good interiors are not the result
-            of pattern recognition or industry shortcuts. They are the result of
-            listening — to a family, to a house, to the way Saturday afternoon light
-            falls on a particular wall. The studio is small on purpose, takes few
-            projects on purpose, and finishes them slowly on purpose.
+            Elle believes the most successful projects begin with listening. Every
+            home carries a history, and every room holds memories. Understanding how a
+            space will be used, who will use it, and what already exists within its
+            walls is essential to creating something lasting. How can we breathe new
+            life into a home without erasing its past? How can we introduce
+            personality, warmth, and whimsy while preserving what makes it special?
           </p>
           <p className="letter-prose">
-            If you are considering a renovation or a build and want a designer who
-            will sit with your house long enough to understand it — and to honor what
-            the family inside it actually needs — I would like to hear from you.
+            I began this practice because I believe thoughtful interiors are not the
+            result of trends, formulas, or industry shortcuts. They come from
+            listening: to a family, to a house, and to the way Saturday afternoon
+            light moves across a particular wall. The studio is intentionally small,
+            intentionally selective, and intentionally slow. Good design deserves
+            time.
+          </p>
+          <p className="letter-prose">
+            If you're planning a renovation, restoring an older home, or building
+            something new, and you're looking for a designer who will take the time to
+            truly understand your home and the people living in it. The Cottage is the
+            first project we are able to share publicly, and we cannot wait to share
+            more.
           </p>
           <p className="letter-signoff">Elle</p>
           <p className="letter-credit">Founder &middot; Elle Rosa Design &middot; Houston</p>
