@@ -902,34 +902,6 @@ a:focus-visible {
   margin-bottom: var(--space-lg);
 }
 
-.inquire-statement {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 500;
-  font-variation-settings: var(--var-hero);
-  font-feature-settings: "ss01", "salt", "swsh", "dlig";
-  font-size: var(--text-display-s);
-  line-height: 1.02;
-  color: var(--color-paper);
-  letter-spacing: -0.02em;
-  max-width: 1000px;
-  margin: 0 auto var(--space-xl);
-  min-width: 0;
-  overflow-wrap: anywhere;
-}
-
-.inquire-prose {
-  font-family: var(--font-display);
-  font-style: italic;
-  font-weight: 400;
-  font-variation-settings: var(--var-body);
-  font-size: var(--text-2xl);
-  line-height: 1.5;
-  color: var(--color-paper);
-  opacity: 0.85;
-  max-width: 620px;
-  margin: 0 auto var(--space-2xl);
-}
 
 .inquire-link {
   display: inline-flex;
