@@ -3,6 +3,7 @@ import primaryBedroomMoodboard from "@/assets/primary-bedroom-moodboard.png";
 import powderRoomMoodboard from "@/assets/powder-room-moodboard.png";
 import bedroom1Moodboard from "@/assets/bedroom1-moodboard.png";
 import bedroom2Moodboard from "@/assets/bedroom2-moodboard.png";
+import kitchenMoodboard from "@/assets/kitchen-moodboard.png";
 import primaryBedroomRendering from "@/assets/primary-bedroom-rendering-moodboard.png";
 
 const NAV_LINKS = [
@@ -179,7 +180,7 @@ const Index = () => {
             A summer house on the St.&nbsp;Lawrence, composed room by room.
           </p>
           <ul className="project-masthead-details">
-            <li>Five rooms</li>
+            <li>Six rooms</li>
             <li>In progress</li>
             <li>2026</li>
           </ul>
@@ -311,6 +312,37 @@ const Index = () => {
           </p>
           <p className="plate-meta">
             Primary bedroom
+            <span className="sep">&middot;</span>
+            The Cottage
+            <span className="sep">&middot;</span>
+            Wellesley Island
+          </p>
+        </div>
+      </section>
+
+      {/* PLATE — KITCHEN */}
+      <section className="fold fold--plate">
+        <MoodboardFigure
+          src={kitchenMoodboard}
+          alt="The Cottage — kitchen mood board. Yellow-painted cabinetry in Sherwin-Williams Honey Bees, scalloped rattan pendant lights, blue-and-white floral wallpaper, white subway tile backsplash, walnut hardwood floors, brass cup-pull hardware, and wooden counter stools."
+          plate="No. 06"
+        />
+        <div className="plate-annotation">
+          <p className="plate-number">Kitchen</p>
+          <h2 className="plate-title">
+            Honey Bees, rattan, and a wallpaper worth lingering over.
+          </h2>
+          <p className="plate-body">
+            Cabinets in Sherwin-Williams <em>Honey Bees</em> — warm without
+            being loud, the kind of yellow that makes a kitchen feel like it has
+            been cooking Sunday breakfasts for thirty years. Scalloped rattan
+            pendants over the island, walnut floors underfoot, blue-and-white
+            floral wallpaper on the far wall. White subway tile keeps the room
+            grounded; brass cup pulls catch the light. A kitchen should feel
+            generous and unhurried, and this one does.
+          </p>
+          <p className="plate-meta">
+            Kitchen
             <span className="sep">&middot;</span>
             The Cottage
             <span className="sep">&middot;</span>
