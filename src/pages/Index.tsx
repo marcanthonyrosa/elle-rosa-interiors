@@ -153,8 +153,9 @@ const Index = () => {
       <section className="fold fold--text">
         <div className="text-fold-inner">
           <p className="text-fold-lede">
-            Elle Rosa Design is a residential studio in Houston, Texas — building
-            homes that feel as if they have <em>always been there</em>.
+            Elle Rosa Design is a residential studio based in Houston, Texas,
+            with projects across the country, creating homes that feel as though
+            they have always been there.
           </p>
         </div>
       </section>
