@@ -367,14 +367,6 @@ const Index = () => {
           <p className="inquire-eyebrow">
             Now taking projects &middot; 2026 — 2027
           </p>
-          <h2 className="inquire-statement">
-            A considered home begins with a considered conversation.
-          </h2>
-          <p className="inquire-prose">
-            The studio takes on a small number of engagements each year. Tell us
-            about your home, your family, and what you are hoping for — and we will
-            be in touch within the week.
-          </p>
           <a href="mailto:elle@ellerosadesign.com" className="inquire-link">
             Begin a project{" "}
             <span className="arrow" aria-hidden="true">
