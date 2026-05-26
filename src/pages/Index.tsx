@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
-import primaryBedroomMoodboard from "@/assets/primary-bedroom-moodboard.png";
 import powderRoomMoodboard from "@/assets/powder-room-moodboard.png";
 import bedroom1Moodboard from "@/assets/bedroom1-moodboard.png";
 import bedroom2Moodboard from "@/assets/bedroom2-moodboard.png";
 import kitchenMoodboard from "@/assets/kitchen-moodboard.png";
+import kitchenRendering from "@/assets/kitchen-rendering-moodboard.png";
 import primaryBedroomRendering from "@/assets/primary-bedroom-rendering-moodboard.png";
 
 const NAV_LINKS = [
@@ -130,16 +130,16 @@ const Index = () => {
         </nav>
       </div>
 
-      {/* HERO — PRIMARY BEDROOM RENDERING */}
+      {/* HERO — KITCHEN RENDERING */}
       <section className="fold fold--hero" id="work">
         <MoodboardFigure
-          src={primaryBedroomRendering}
-          alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
+          src={kitchenRendering}
+          alt="The Cottage — kitchen mood board. Golden yellow cabinetry, blue-and-white patterned tile backsplash, brass hardware, open shelving, farmhouse sink, subway tile, warm natural light."
           plate="No. 01"
         />
         <div className="hero-caption-strip">
           <span className="hero-caption-plate">No. 01</span>
-          <h2 className="hero-caption-title">The Cottage — Primary bedroom</h2>
+          <h2 className="hero-caption-title">The Cottage — Kitchen</h2>
           <p className="hero-caption-meta">
             Mood board
             <span className="sep">&middot;</span>
@@ -290,11 +290,11 @@ const Index = () => {
         </div>
       </section>
 
-      {/* PLATE — PRIMARY BEDROOM MOOD BOARD */}
+      {/* PLATE — PRIMARY BEDROOM RENDERING */}
       <section className="fold fold--plate fold--plate--reverse">
         <MoodboardFigure
-          src={primaryBedroomMoodboard}
-          alt="The Cottage — primary bedroom mood board. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
+          src={primaryBedroomRendering}
+          alt="The Cottage — primary bedroom rendering. Manor Blue painted walls, linen-upholstered four-poster bed, walnut nightstand, Wyeth painting, brass goose-neck floor lamp, lake view through sliding doors."
           plate="No. 05"
         />
         <div className="plate-annotation">
