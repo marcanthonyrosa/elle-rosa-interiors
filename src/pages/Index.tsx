@@ -8,9 +8,19 @@ import primaryBedroomRendering from "@/assets/primary-bedroom-rendering-moodboar
 
 const NAV_LINKS = [
   { href: "#work", label: "The Work" },
-  { href: "#process", label: "The Process" },
   { href: "#studio", label: "The Studio" },
   { href: "#inquire", label: "Inquire" },
+];
+
+const SPECIMENS = [
+  { name: "Manor Blue", vendor: "Benjamin Moore · BM 1607", color: "oklch(55% 0.08 250)" },
+  { name: "Honey Bees", vendor: "Sherwin-Williams · SW 9018", color: "oklch(82% 0.12 90)" },
+  { name: "Queen Anne's Lace", vendor: "York Wallcoverings", color: "oklch(90% 0.03 230)" },
+  { name: "Rattan, natural", vendor: "Source TBD", color: "oklch(72% 0.06 75)" },
+  { name: "Walnut, oiled", vendor: "Source TBD", color: "oklch(42% 0.06 55)" },
+  { name: "White subway, 3×6", vendor: "Source TBD", color: "oklch(95% 0.005 90)" },
+  { name: "Brass, unlacquered", vendor: "Source TBD", color: "oklch(75% 0.10 85)" },
+  { name: "Wool sisal, oatmeal", vendor: "Source TBD", color: "oklch(82% 0.03 80)" },
 ];
 
 type MoodboardFigureProps = {
@@ -134,14 +144,14 @@ const Index = () => {
       <section className="fold fold--hero" id="work">
         <MoodboardFigure
           src={kitchenRendering}
-          alt="The Cottage — kitchen mood board. Golden yellow cabinetry, blue-and-white patterned tile backsplash, brass hardware, open shelving, farmhouse sink, subway tile, warm natural light."
+          alt="The Cottage — kitchen concept render. Golden yellow cabinetry, blue-and-white patterned tile backsplash, brass hardware, open shelving, farmhouse sink, subway tile, warm natural light."
           plate="No. 01"
         />
         <div className="hero-caption-strip">
           <span className="hero-caption-plate">No. 01</span>
           <h2 className="hero-caption-title">The Cottage — Kitchen</h2>
           <p className="hero-caption-meta">
-            Mood board
+            Concept render
             <span className="sep">&middot;</span>
             Wellesley Island
             <span className="sep">&middot;</span>
@@ -162,7 +172,7 @@ const Index = () => {
       </section>
 
       {/* PROJECT MASTHEAD — THE COTTAGE */}
-      <section className="fold fold--project-masthead" id="process">
+      <section className="fold fold--project-masthead">
         <div className="project-masthead-inner">
           <p className="project-masthead-eyebrow">
             Featured project
@@ -187,11 +197,20 @@ const Index = () => {
         </div>
       </section>
 
+      {/* FRAMING LINE */}
+      <div className="catalogue-framing">
+        <p className="catalogue-framing-text">
+          The Cottage is a current project. The images below are design concepts
+          developed for the family — finished photography will follow as the
+          home is built.
+        </p>
+      </div>
+
       {/* PLATE — POWDER ROOM */}
       <section className="fold fold--plate">
         <MoodboardFigure
           src={powderRoomMoodboard}
-          alt="The Cottage — powder room mood board. A small bathroom with pale blue Queen Anne's lace botanical wallpaper, white beadboard wainscoting, a white pedestal sink, cane-front cabinetry, scalloped sconces, and a scalloped jute rug."
+          alt="The Cottage — powder room concept render. A small bathroom with pale blue Queen Anne's lace botanical wallpaper, white beadboard wainscoting, a white pedestal sink, cane-front cabinetry, scalloped sconces, and a scalloped jute rug."
           plate="No. 02"
         />
         <div className="plate-annotation">
@@ -235,7 +254,7 @@ const Index = () => {
       <section className="fold fold--plate fold--plate--reverse">
         <MoodboardFigure
           src={bedroom1Moodboard}
-          alt="The Cottage — Bedroom 1 mood board. A guest bedroom with a spool-turned walnut spindle bed, butter-yellow quilted bedding, scalloped wicker bedside lamps, and a gallery wall of mixed framed artwork."
+          alt="The Cottage — Bedroom 1 concept render. A guest bedroom with a spool-turned walnut spindle bed, butter-yellow quilted bedding, scalloped wicker bedside lamps, and a gallery wall of mixed framed artwork."
           plate="No. 03"
         />
         <div className="plate-annotation">
@@ -265,7 +284,7 @@ const Index = () => {
       <section className="fold fold--plate">
         <MoodboardFigure
           src={bedroom2Moodboard}
-          alt="The Cottage — Bedroom 2 mood board. A guest bedroom with a mid-century walnut spindle bed, brass dome bedside lamps, a pink floral quilt over sage linen sheets, a green-and-cream geometric area rug, and two architectural sketches in narrow frames above the bed."
+          alt="The Cottage — Bedroom 2 concept render. A guest bedroom with a mid-century walnut spindle bed, brass dome bedside lamps, a pink floral quilt over sage linen sheets, a green-and-cream geometric area rug, and two architectural sketches in narrow frames above the bed."
           plate="No. 04"
         />
         <div className="plate-annotation">
@@ -320,11 +339,31 @@ const Index = () => {
         </div>
       </section>
 
+      {/* MATERIALS & FINISHES */}
+      <section className="fold fold--specimen">
+        <div className="specimen-inner">
+          <p className="specimen-eyebrow">Materials · The Cottage</p>
+          <h2 className="specimen-title">The palette.</h2>
+          <div className="specimen-grid">
+            {SPECIMENS.map((s) => (
+              <div key={s.name} className="specimen-card">
+                <div
+                  className="specimen-chip"
+                  style={{ backgroundColor: s.color }}
+                />
+                <p className="specimen-name">{s.name}</p>
+                <p className="specimen-vendor">{s.vendor}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* PLATE — KITCHEN */}
       <section className="fold fold--plate">
         <MoodboardFigure
           src={kitchenMoodboard}
-          alt="The Cottage — kitchen mood board. Yellow-painted cabinetry in Sherwin-Williams Honey Bees, scalloped rattan pendant lights, blue-and-white floral wallpaper, white subway tile backsplash, walnut hardwood floors, brass cup-pull hardware, and wooden counter stools."
+          alt="The Cottage — kitchen concept render. Yellow-painted cabinetry in Sherwin-Williams Honey Bees, scalloped rattan pendant lights, blue-and-white floral wallpaper, white subway tile backsplash, walnut hardwood floors, brass cup-pull hardware, and wooden counter stools."
           plate="No. 06"
         />
         <div className="plate-annotation">
@@ -423,19 +462,16 @@ const Index = () => {
             </p>
           </div>
           <ul className="footer-list">
-            <h4>The Studio</h4>
+            <p className="footer-col-label">The Studio</p>
             <li>
               <a href="#work">The Work</a>
-            </li>
-            <li>
-              <a href="#process">The Process</a>
             </li>
             <li>
               <a href="#inquire">Inquire</a>
             </li>
           </ul>
           <ul className="footer-list">
-            <h4>Elsewhere</h4>
+            <p className="footer-col-label">Elsewhere</p>
             <li>
               <a href="mailto:elle@ellerosadesign.com">elle@ellerosadesign.com</a>
             </li>
