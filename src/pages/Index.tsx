@@ -9,7 +9,6 @@ const NAV_LINKS = [
   { href: "#work", label: "The Work" },
   { href: "#process", label: "The Process" },
   { href: "#studio", label: "The Studio" },
-  { href: "#journal", label: "Journal" },
   { href: "#inquire", label: "Inquire" },
 ];
 
@@ -160,15 +159,41 @@ const Index = () => {
         </div>
       </section>
 
+      {/* PROJECT MASTHEAD — THE COTTAGE */}
+      <section className="fold fold--project-masthead" id="process">
+        <div className="project-masthead-inner">
+          <p className="project-masthead-eyebrow">
+            Featured project
+            <span className="sep">&middot;</span>
+            Thousand Islands, N.Y.
+          </p>
+          <div className="project-masthead-rule" aria-hidden="true">
+            <span className="project-masthead-rule-ornament">&loz;</span>
+          </div>
+          <h2 className="project-masthead-title">The Cottage</h2>
+          <div className="project-masthead-rule" aria-hidden="true">
+            <span className="project-masthead-rule-ornament">&loz;</span>
+          </div>
+          <p className="project-masthead-subtitle">
+            A summer house on the St.&nbsp;Lawrence, composed room by room.
+          </p>
+          <ul className="project-masthead-details">
+            <li>Five rooms</li>
+            <li>In progress</li>
+            <li>2026</li>
+          </ul>
+        </div>
+      </section>
+
       {/* PLATE — POWDER ROOM */}
-      <section className="fold fold--plate" id="process">
+      <section className="fold fold--plate">
         <MoodboardFigure
           src={powderRoomMoodboard}
           alt="The Cottage — powder room mood board. A small bathroom with pale blue Queen Anne's lace botanical wallpaper, white beadboard wainscoting, a white pedestal sink, cane-front cabinetry, scalloped sconces, and a scalloped jute rug."
           plate="No. 02"
         />
         <div className="plate-annotation">
-          <p className="plate-number">No. 02</p>
+          <p className="plate-number">Powder room</p>
           <h2 className="plate-title">
             A small room earns the right to be playful.
           </h2>
@@ -212,7 +237,7 @@ const Index = () => {
           plate="No. 03"
         />
         <div className="plate-annotation">
-          <p className="plate-number">No. 03</p>
+          <p className="plate-number">Bedroom one</p>
           <h2 className="plate-title">
             A gallery wall earned over decades, not curated in an afternoon.
           </h2>
@@ -242,7 +267,7 @@ const Index = () => {
           plate="No. 04"
         />
         <div className="plate-annotation">
-          <p className="plate-number">No. 04</p>
+          <p className="plate-number">Bedroom two</p>
           <h2 className="plate-title">
             The quieter sibling, with floral and sage.
           </h2>
@@ -271,7 +296,7 @@ const Index = () => {
           plate="No. 05"
         />
         <div className="plate-annotation">
-          <p className="plate-number">No. 05</p>
+          <p className="plate-number">Primary bedroom</p>
           <h2 className="plate-title">
             Manor Blue, a Wyeth, and the water beyond.
           </h2>
@@ -321,51 +346,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* JOURNAL INDEX */}
-      <section className="fold fold--index" id="journal">
-        <div className="index-inner">
-          <div className="index-head">
-            <h2 className="index-title">From the journal.</h2>
-            <p className="index-issue">Issue One &middot; May 2026</p>
-          </div>
-          <ol className="index-entries">
-            <li className="index-entry">
-              <span className="index-entry-num">No. 01</span>
-              <h3 className="index-entry-title">
-                Manor Blue, and the bedroom that watches the water.
-              </h3>
-              <p className="index-entry-meta">
-                Mood board
-                <span className="sep">&middot;</span>
-                May 2026
-              </p>
-            </li>
-            <li className="index-entry">
-              <span className="index-entry-num">No. 02</span>
-              <h3 className="index-entry-title">
-                On Queen Anne's lace and the small bathrooms in old houses.
-              </h3>
-              <p className="index-entry-meta">
-                Mood board
-                <span className="sep">&middot;</span>
-                April 2026
-              </p>
-            </li>
-            <li className="index-entry">
-              <span className="index-entry-num">No. 03</span>
-              <h3 className="index-entry-title">
-                Gallery walls, earned over decades rather than curated in an
-                afternoon.
-              </h3>
-              <p className="index-entry-meta">
-                Process
-                <span className="sep">&middot;</span>
-                March 2026
-              </p>
-            </li>
-          </ol>
-        </div>
-      </section>
 
       {/* INQUIRE — INKWELL BAND */}
       <section className="fold fold--inquire" id="inquire">
@@ -411,9 +391,6 @@ const Index = () => {
             </li>
             <li>
               <a href="#process">The Process</a>
-            </li>
-            <li>
-              <a href="#journal">Journal</a>
             </li>
             <li>
               <a href="#inquire">Inquire</a>
